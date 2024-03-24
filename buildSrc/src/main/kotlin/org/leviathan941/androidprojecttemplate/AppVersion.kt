@@ -14,12 +14,26 @@
  * limitations under the License.
  */
 
-package org.leviathan941.android_project_template
+package org.leviathan941.androidprojecttemplate
 
-import org.gradle.api.JavaVersion
+class AppVersion {
+    val code: Int by lazy {
+        val minor = fixVersionPart(MINOR)
+        val patch = fixVersionPart(PATCH)
+        "$MAJOR$minor$patch".toInt()
+    }
 
-object Versions {
-    val JAVA_SRC_COMPAT = JavaVersion.VERSION_11
-    val JAVA_TARGET_COMPAT = JavaVersion.VERSION_11
-    const val KOTLIN_JVM = 11
+    val name = "$MAJOR.$MINOR.$PATCH"
+
+    private fun fixVersionPart(part: String) = if (part.length > 1) {
+        part
+    } else {
+        "0$part"
+    }
+
+    companion object {
+        const val MAJOR = "0"
+        const val MINOR = "1" // from 0 to 99
+        const val PATCH = "0" // from 0 to 99
+    }
 }

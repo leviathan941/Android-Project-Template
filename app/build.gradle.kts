@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-import org.leviathan941.android_project_template.AndroidSdk
-import org.leviathan941.android_project_template.Application
-import org.leviathan941.android_project_template.Versions
+import org.leviathan941.androidprojecttemplate.AndroidSdk
+import org.leviathan941.androidprojecttemplate.Application
+import org.leviathan941.androidprojecttemplate.Versions
 
 plugins {
     alias(libs.plugins.android.application)

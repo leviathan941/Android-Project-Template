@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.leviathan941.android_project_template
+package org.leviathan941.androidprojecttemplate
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -26,7 +26,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import org.leviathan941.android_project_template.ui.theme.AndroidProjectTemplateTheme
+import org.leviathan941.androidprojecttemplate.ui.theme.AndroidProjectTemplateTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

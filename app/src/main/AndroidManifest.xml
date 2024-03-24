@@ -2,7 +2,7 @@
 
     <application>
         <activity
-            android:name="org.leviathan941.android_project_template.MainActivity"
+            android:name="org.leviathan941.androidprojecttemplate.MainActivity"
             android:exported="true"
             android:label="@string/title_activity_main"
             android:theme="@style/Theme.AndroidProjectTemplate">

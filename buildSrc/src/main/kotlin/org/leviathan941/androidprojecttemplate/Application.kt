@@ -14,10 +14,11 @@
  * limitations under the License.
  */
 
-package org.leviathan941.android_project_template
+package org.leviathan941.androidprojecttemplate
 
-object AndroidSdk {
-    const val COMPILE_SDK_VERSION = 34
-    const val MIN_SDK_VERSION = 24
-    const val TARGET_SDK_VERSION = 34
+object Application {
+    @Suppress("MemberVisibilityCanBePrivate")
+    const val BASE_NAME = "android_project_template"
+    const val ID = "org.leviathan941.$BASE_NAME"
+    val version = AppVersion()
 }

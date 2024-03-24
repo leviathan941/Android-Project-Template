@@ -14,6 +14,13 @@
  * limitations under the License.
  */
 
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
 rootProject.name = "Android Project Template"
 include(":app")
-

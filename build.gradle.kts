@@ -14,15 +14,11 @@
  * limitations under the License.
  */
 
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-    }
-    dependencies {
-        classpath(org.leviathan941.android_project_template.dependency.Plugins.android)
-        classpath(org.leviathan941.android_project_template.dependency.Plugins.kotlin)
-    }
+plugins {
+    alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.kotlin.android) apply false
+    alias(libs.plugins.kotlin.kapt) apply false
+    alias(libs.plugins.kotlin.parcelize) apply false
 }
 
 allprojects {

@@ -16,14 +16,13 @@
 
 import org.leviathan941.android_project_template.AndroidSdk
 import org.leviathan941.android_project_template.Application
-import org.leviathan941.android_project_template.dependency.Dependencies
-import org.leviathan941.android_project_template.dependency.Versions
+import org.leviathan941.android_project_template.Versions
 
 plugins {
-    id("com.android.application")
-    kotlin("android")
-    kotlin("plugin.parcelize")
-    kotlin("kapt")
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.parcelize)
+    alias(libs.plugins.kotlin.kapt)
 }
 
 android {
@@ -70,7 +69,7 @@ android {
         buildConfig = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = Versions.COMPOSE_COMPILER
+        kotlinCompilerExtensionVersion = libs.compose.compiler.get().version
     }
     packaging {
         resources {
@@ -80,25 +79,24 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
 
-    implementation(Dependencies.androidCoreKtx)
-    implementation(Dependencies.appCompat)
+    implementation(libs.google.material)
 
-    implementation(Dependencies.material)
+    implementation(libs.compose.compiler)
+    implementation(libs.compose.ui)
+    implementation(libs.compose.runtime.livedata)
+    implementation(libs.compose.material3)
 
-    implementation(Dependencies.composeCompiler)
-    implementation(Dependencies.compose.ui)
-    implementation(Dependencies.compose.runtimeLivedata)
-    implementation(Dependencies.composeMaterial3)
-    implementation(Dependencies.compose.uiToolingPreview)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.savedstate)
 
-    implementation(Dependencies.lifecycle.livedataKtx)
-    implementation(Dependencies.lifecycle.viewModelKtx)
-    implementation(Dependencies.lifecycle.viewModelSavedState)
+    implementation(libs.compose.activity)
 
-    implementation(Dependencies.activityCompose)
+    implementation(libs.datastore.preferences)
 
-    implementation(Dependencies.dataStorePreferences)
-
-    debugImplementation(Dependencies.compose.uiTooling)
+    debugImplementation(libs.compose.ui.tooling)
+    debugImplementation(libs.compose.ui.tooling.preview)
 }

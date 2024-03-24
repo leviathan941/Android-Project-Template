@@ -16,7 +16,7 @@
 
 import org.leviathan941.android_project_template.AndroidSdk
 import org.leviathan941.android_project_template.Application
-import org.leviathan941.android_project_template.dependency.Deps
+import org.leviathan941.android_project_template.dependency.Dependencies
 import org.leviathan941.android_project_template.dependency.Versions
 
 plugins {
@@ -81,24 +81,24 @@ android {
 
 dependencies {
 
-    implementation(Deps.androidCoreKtx)
-    implementation(Deps.appCompat)
+    implementation(Dependencies.androidCoreKtx)
+    implementation(Dependencies.appCompat)
 
-    implementation(Deps.material)
+    implementation(Dependencies.material)
 
-    implementation(Deps.composeCompiler)
-    implementation(Deps.compose.ui)
-    implementation(Deps.compose.runtimeLivedata)
-    implementation(Deps.composeMaterial3)
-    implementation(Deps.compose.uiToolingPreview)
+    implementation(Dependencies.composeCompiler)
+    implementation(Dependencies.compose.ui)
+    implementation(Dependencies.compose.runtimeLivedata)
+    implementation(Dependencies.composeMaterial3)
+    implementation(Dependencies.compose.uiToolingPreview)
 
-    implementation(Deps.lifecycle.livedataKtx)
-    implementation(Deps.lifecycle.viewModelKtx)
-    implementation(Deps.lifecycle.viewModelSavedState)
+    implementation(Dependencies.lifecycle.livedataKtx)
+    implementation(Dependencies.lifecycle.viewModelKtx)
+    implementation(Dependencies.lifecycle.viewModelSavedState)
 
-    implementation(Deps.activityCompose)
+    implementation(Dependencies.activityCompose)
 
-    implementation(Deps.dataStorePreferences)
+    implementation(Dependencies.dataStorePreferences)
 
-    debugImplementation(Deps.compose.uiTooling)
+    debugImplementation(Dependencies.compose.uiTooling)
 }

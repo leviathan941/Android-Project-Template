@@ -21,7 +21,7 @@ object Plugins {
     val kotlin by lazy { "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.KOTLIN_PLUGIN}" }
 }
 
-object Deps {
+object Dependencies {
     val activityCompose by lazy { "androidx.activity:activity-compose:${Versions.ACTIVITY_COMPOSE}" }
     val androidCoreKtx by lazy { "androidx.core:core-ktx:${Versions.ANDROID_CORE}" }
     val appCompat by lazy { "androidx.appcompat:appcompat:${Versions.APP_COMPAT}" }

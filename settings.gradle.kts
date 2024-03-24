@@ -1,3 +1,5 @@
+@file:Suppress("UnstableApiUsage")
+
 /*
  * Copyright 2024 Alexey Kuzin <amkuzink@gmail.com>
  *
@@ -19,6 +21,21 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
+    }
+}
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
     }
 }
 
